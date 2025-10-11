@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korede Wahab | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="image/K logo.jpg" type="image/png" />
+  <script src="https://kit.fontawesome.com/cf7e74700f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <nav role="navigation">
+      <ul class="sidebar">
+        <li><img src="./image/Kdot.png" alt="Korede Wahab Portfolio" class="myportfolio" /></li>
+        <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-binoculars"></i> About</a></li>
+        <li><a href="#work"><i class="fa-solid fa-computer"></i> Work</a></li>
+        <li><a href="#service"><i class="fa-solid fa-gamepad"></i> Service</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <li class="social-icons">
+          <a href="https://www.instagram.com/korede.ws"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/korede_so"><i class="fa-brands fa-square-twitter"></i></a>
+          <a href="https://github.com/Korede-So"><i class="fa-brands fa-github"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="home">
+      <div class="hero">
+        <h1>Hello, I'm <span>Korede Wahab</span></h1>
+        <h2>I <span>design</span> and <span>develop</span> websites</h2>
+        <p class="tagline">Crafting digital experiences that blend creativity and code.</p>
+        <a href="#work" class="cta-button">View My Work</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-container">
+        <h1>About Me</h1>
+        <p>I’m Korede Wahab, a creative developer and designer who blends aesthetics with functionality. I specialize in building elegant, intuitive websites and brand identities.</p>
+        <div class="about-cards">
+          <div class="card">
+            <h3>🎨 Designer</h3>
+            <p>Logos, banners, and brand visuals that resonate.</p>
+          </div>
+          <div class="card">
+            <h3>💻 Developer</h3>
+            <p>Responsive websites and scalable applications.</p>
+          </div>
+          <div class="card">
+            <h3>🧠 Strategist</h3>
+            <p>From concept to execution, I guide your digital journey.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <h1>My Achievements</h1>
+      <div class="counters">
+        <div>
+          <div class="counter" data-target="7">0</div>
+          <p>Projects Completed</p>
+        </div>
+        <div>
+          <div class="counter" data-target="3">0</div>
+          <p>Years Experience</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <h1>My Projects</h1>
+      <div class="portfolio-grid">
+        <div class="project">
+          <img src="image/Mobile Application.jpg" alt="Mobile App Design" />
+          <h3>Mobile App Design</h3>
+        </div>
+        <div class="project">
+          <img src="image/download.jpg" alt="Mobile Applications" />
+          <h3>Mobile Applications</h3>
+        </div>
+        <div class="project">
+          <img src="image/Design Poster.jpg" alt="Brand and Logo Design" />
+          <h3>Brand & Logo Design</h3>
+        </div>
+        <div class="project">
+          <img src="image/Website-Design-new.jpeg" alt="Web Application Design" />
+          <h3>Web Application Design</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="service">
+      <h1>Services</h1>
+      <div class="service-grid">
+        <div class="service-card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Web Development</h3>
+          <p>Custom websites built with clean, scalable code.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <h3>Mobile Apps</h3>
+          <p>Native and hybrid apps for iOS and Android.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-palette"></i>
+          <h3>Brand Design</h3>
+          <p>Logos, banners, and full brand identity packages.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h1>Contact Me</h1>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="formStatus"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Korede Wahab</p>
+    <div class="footer-icons">
+      <a href="https://www.instagram.com/korede.ws"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://x.com/korede_so"><i class="fa-brands fa-square-twitter"></i></a>
+      <a href="https://github.com/Korede-So"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
