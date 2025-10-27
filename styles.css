@@ -18,6 +18,8 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--background-dark);
   color: var(--text-light);
+  min-width: 320px;
+  overflow-x: hidden;
 }
 
 body.light-theme {
@@ -27,6 +29,7 @@ body.light-theme {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -36,7 +39,9 @@ nav ul.sidebar {
   margin: 0;
   padding: 0;
   position: fixed;
-  width: 20%;
+  width: 20vw;
+  min-width: 200px;
+  max-width: 300px;
   height: 100%;
   background-color: var(--nav-bg);
   border-radius: 16px;
@@ -48,6 +53,7 @@ nav ul.sidebar {
   align-items: center;
   gap: 1rem;
   padding-top: 1rem;
+  z-index: 100;
 }
 
 nav ul li a {
@@ -88,8 +94,8 @@ nav ul li a.active {
 
 /* Main Content */
 main {
-  margin-left: 20%;
-  padding: 2rem;
+  margin-left: 20vw;
+  padding: 2vw;
 }
 
 /* Home Section */
@@ -104,17 +110,17 @@ main {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 6vw;
   margin-bottom: 0.5rem;
 }
 
 .hero h2 {
-  font-size: 2rem;
+  font-size: 4vw;
   margin-bottom: 1rem;
 }
 
 .hero .tagline {
-  font-size: 1.2rem;
+  font-size: 3vw;
   margin-bottom: 2rem;
 }
 
@@ -126,6 +132,7 @@ main {
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
+  font-size: 1rem;
 }
 
 .cta-button:hover {
@@ -310,7 +317,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: 20%;
+  margin-left: 20vw;
 }
 
 .footer-icons {
@@ -323,27 +330,40 @@ footer {
   font-size: 1.5rem;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   nav ul.sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    border-radius: 0;
+    width: 40vw; /* Shrinks sidebar to 40% of screen width */
+    min-width: 160px;
   }
 
   main {
-    margin-left: 0;
-    padding: 1rem;
+    margin-left: 40vw; /* Matches sidebar width */
   }
 
-  footer {
-    margin-left: 0;
+  .home, .about, .stats, .service, .work, .contact {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    align-items: center;
+    gap: 1.5rem;
+    display: flex;
+    width: 60vw;
+  }
+
+
+  .project img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .service-card {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .project {
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .portfolio-grid {
@@ -351,8 +371,30 @@ footer {
   }
 
   .about-cards,
-  .service-grid {
+  .service-grid,
+  .counters {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    display: flex;
+    width: 100;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  /* Light/Dark mode button stays visible */
+  .theme-toggle {
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  footer {
+    margin-left: 40vw; /* Matches sidebar width */
   }
 }
